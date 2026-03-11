@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>FAQ — CattleAI</title>
+<script>(function(){var k='cattleai_user',s=null;try{s=JSON.parse(localStorage.getItem(k));}catch(e){}try{if(!s)s=JSON.parse(sessionStorage.getItem(k));}catch(e){}if(!s){window.location.replace('../login.html');}})();</script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--gd:#1a3a2a;--gm:#2d6a4f;--gl:#52b788;--am:#e9a825;--cr:#f8f4ec;--wh:#fff;--tx:#1a1a1a;--mu:#64748b;--br:#dde3d5;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'Mulish',sans-serif;background:var(--cr);color:var(--tx);overflow-x:hidden;padding-top:68px;}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:9999;height:68px;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--br);display:flex;align-items:center;padding:0 40px;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
+.logo-icon{width:42px;height:42px;background:linear-gradient(135deg,var(--gm),var(--gd));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;}
+.logo-text{display:flex;flex-direction:column;line-height:1.15;}
+.logo-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--gd);}
+.logo-sub{font-size:10px;font-weight:700;color:var(--mu);letter-spacing:1px;text-transform:uppercase;}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none;position:absolute;left:50%;transform:translateX(-50%);}
+.nav-links a{text-decoration:none;font-size:14px;font-weight:600;color:var(--mu);padding:8px 16px;border-radius:8px;transition:color .2s,background .2s;}
+.nav-links a:hover{color:var(--gm);background:rgba(45,106,79,.08);}
+.nav-links a.active{color:var(--gd);font-weight:700;background:rgba(45,106,79,.08);}
+.nav-right{display:flex;align-items:center;gap:8px;margin-left:auto;}
+.soc-btn{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:18px;background:var(--cr);transition:transform .2s,background .2s;}
+.soc-btn:hover{transform:scale(1.15);background:var(--br);}
+.user-pill{display:flex;align-items:center;gap:8px;padding:5px 14px 5px 6px;background:var(--cr);border:1px solid var(--br);border-radius:24px;cursor:pointer;transition:background .2s;}
+.user-pill:hover{background:var(--br);}
+.user-av{width:30px;height:30px;background:linear-gradient(135deg,var(--gm),var(--gd));border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:800;}
+.user-nm{font-size:13px;font-weight:700;color:var(--tx);}
+.page-hero{background:linear-gradient(135deg,var(--gd),var(--gm));padding:80px 80px 70px;color:#fff;position:relative;overflow:hidden;}
+.page-hero::after{content:'❓';position:absolute;font-size:200px;right:80px;top:50%;transform:translateY(-50%);opacity:.08;}
+.breadcrumb{font-size:13px;color:rgba(255,255,255,.55);margin-bottom:16px;}
+.breadcrumb a{color:rgba(255,255,255,.55);text-decoration:none;}.breadcrumb a:hover{color:#fff;}
+.page-hero-title{font-family:'Playfair Display',serif;font-size:52px;font-weight:800;line-height:1.1;margin-bottom:16px;}
+.page-hero-sub{font-size:17px;opacity:.8;max-width:540px;line-height:1.7;}
+.faq-main{max-width:820px;margin:0 auto;padding:80px 40px;}
+.sec-tag{display:inline-block;padding:5px 14px;background:rgba(45,106,79,.08);border-radius:20px;font-size:12px;font-weight:700;color:var(--gm);letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;}
+.sec-title{font-family:'Playfair Display',serif;font-size:38px;font-weight:700;color:var(--gd);margin-bottom:40px;}
+.faq-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px;}
+.faq-tab{padding:8px 20px;border:2px solid var(--br);border-radius:20px;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;background:#fff;color:var(--mu);font-family:'Mulish',sans-serif;}
+.faq-tab.active,.faq-tab:hover{border-color:var(--gm);background:var(--gm);color:#fff;}
+.faq-group{display:none;}.faq-group.visible{display:block;}
+.faq-item{background:#fff;border:1px solid var(--br);border-radius:14px;margin-bottom:12px;overflow:hidden;transition:box-shadow .25s;}
+.faq-item:hover{box-shadow:0 4px 20px rgba(45,106,79,.08);}
+.faq-item.open{box-shadow:0 8px 28px rgba(45,106,79,.1);}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:22px 28px;cursor:pointer;user-select:none;}
+.faq-q-text{font-size:15px;font-weight:700;color:var(--gd);line-height:1.4;flex:1;padding-right:16px;}
+.faq-arrow{width:32px;height:32px;background:rgba(45,106,79,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;transition:transform .3s,background .3s;}
+.faq-item.open .faq-arrow{transform:rotate(180deg);background:var(--gm);color:#fff;}
+.faq-ans{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+.faq-ans.open{max-height:400px;}
+.faq-ans-inner{padding:0 28px 24px;font-size:14px;line-height:1.8;color:#4a5568;border-top:1px solid #f0f0f0;padding-top:16px;}
+.cta-box{background:linear-gradient(135deg,var(--gd),var(--gm));color:#fff;border-radius:20px;padding:48px;text-align:center;margin-top:60px;}
+.cta-icon{font-size:48px;margin-bottom:16px;display:block;}
+.cta-ttl{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;margin-bottom:10px;}
+.cta-desc{font-size:15px;opacity:.8;margin-bottom:28px;}
+.btn-cta{display:inline-block;padding:13px 36px;background:var(--am);color:var(--gd);border-radius:10px;text-decoration:none;font-weight:800;font-size:15px;transition:transform .2s;}
+.btn-cta:hover{transform:translateY(-2px);}
+.footer{background:var(--gd);color:rgba(255,255,255,.7);padding:50px 80px 28px;}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1);}
+.foot-brand{font-family:'Playfair Display',serif;font-size:22px;color:#fff;font-weight:700;margin-bottom:10px;}
+.foot-desc{font-size:13px;line-height:1.7;color:rgba(255,255,255,.5);max-width:260px;}
+.foot-ttl{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--am);margin-bottom:14px;}
+.foot-links{list-style:none;}.foot-links li{margin-bottom:8px;}
+.foot-links a{color:rgba(255,255,255,.6);text-decoration:none;font-size:13px;transition:color .2s;}.foot-links a:hover{color:#fff;}
+.foot-bottom{padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,.4);flex-wrap:wrap;gap:8px;}
+.foot-soc{display:flex;gap:10px;}
+.foot-soc a{width:34px;height:34px;background:rgba(255,255,255,.08);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;text-decoration:none;transition:background .2s;}.foot-soc a:hover{background:rgba(255,255,255,.18);}
+@media(max-width:900px){.nav-links{display:none;}.page-hero{padding:60px 32px;}.faq-main{padding:50px 20px;}.foot-grid{grid-template-columns:1fr 1fr;}.footer{padding:40px 32px 24px;}.navbar{padding:0 20px;}}
+@media(max-width:600px){.page-hero-title{font-size:34px;}.foot-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="../index.html" class="nav-logo">
+    <div class="logo-icon">🐄</div>
+    <div class="logo-text"><span class="logo-name">CattleAI</span><span class="logo-sub">Health Monitor</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="faq.html" class="active">FAQ</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+  <div class="nav-right">
+    <a class="soc-btn" href="https://wa.me/" target="_blank">💬</a>
+    <a class="soc-btn" href="https://twitter.com/" target="_blank">🐦</a>
+    <a class="soc-btn" href="https://facebook.com/" target="_blank">👍</a>
+    <div class="user-pill" onclick="doLogout()">
+      <div class="user-av" id="uAv">👤</div><div class="user-nm" id="uNm">User</div>
+      <span style="font-size:11px;color:var(--mu);margin-left:2px;">▾</span>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="breadcrumb"><a href="../index.html">Home</a> › FAQ</div>
+  <h1 class="page-hero-title">Frequently Asked Questions</h1>
+  <p class="page-hero-sub">Everything you need to know about CattleAI — from getting started to understanding AI results.</p>
+</section>
+
+<div class="faq-main">
+  <div class="sec-tag">Help Centre</div>
+  <h2 class="sec-title">Common Questions</h2>
+
+  <div class="faq-tabs">
+    <button class="faq-tab active" onclick="showGroup('general',this)">General</button>
+    <button class="faq-tab" onclick="showGroup('technical',this)">Technical</button>
+    <button class="faq-tab" onclick="showGroup('analysis',this)">Analysis</button>
+    <button class="faq-tab" onclick="showGroup('billing',this)">Billing</button>
+  </div>
+
+  <div class="faq-group visible" id="group-general">
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><div class="faq-q-text">What is CattleAI and how does it work?</div><div class="faq-arrow">▼</div></div><div class="faq-ans"><div class="faq-ans-inner">CattleAI is an AI-powered cattle health monitoring platform. You upload a photo or video of your cattle, and our deep learning models analyse their gait to detect signs of lameness, disease, or discomfort. Results are delivered in seconds with a detailed health report.</div></div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><div class="faq-q-text">Do I need any special equipment to use CattleAI?</div><div class="faq-arrow">▼</div></div><div class="faq-ans"><div class="faq-ans-inner">No special equipment required. A standard smartphone camera or farm CCTV footage works perfectly. We recommend filming from the side while the animal walks in a straight line, but our system handles various angles and lighting conditions effectively.</div></div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><div class="faq-q-text">How accurate is the disease detection?</div><div class="faq-arrow">▼</div></div><div class="faq-ans"><div class="faq-ans-inner">Overall accuracy across all detectable conditions is 95%. Individual disease accuracy varies from 89% (joint infection) to 98% (hoof overgrowth). Our models are validated against veterinary-confirmed diagnoses and continuously improved with new data.</div></div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><div class="faq-q-text">Is CattleAI a replacement for a veterinarian?</div><div class="faq-arrow">▼</div></div><div class="faq-ans"><div class="faq-ans-inner">No. CattleAI is a screening and monitoring tool, not a veterinary service. It helps you identify animals that need attention much earlier than manual observation would allow. All high-severity detections should be confirmed and treated by a qualified veterinarian.</div></div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><div class="faq-q-text">Can I use CattleAI for beef cattle, not just dairy?</div><div class="faq-arrow">▼</div></div><div class="faq-ans"><div class="faq-ans-inner">Yes. CattleAI works for all cattle breeds — dairy, beef, and dual-purpose. Our models were trained on diverse cattle populations and automatically adjust reference ranges based on visual characteristics.</div></div></div>
+  </div>
+
+  <div class="faq-group" id="group-technical">
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><div class="faq-q-text">What file formats and sizes are supported?</div><div class="faq-arrow">▼</div></div><div class="faq-ans"><div class="faq-ans-inner">Images: JPG, JPEG, PNG (up to 100MB). Videos: MP4, AVI, MOV (up to 100MB). For video, we recommend at least 5–10 seconds showing the animal walking. Higher resolution footage generally produces more accurate results.</div></div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><div class="faq-q-text">What AI models power the analysis?</div><div class="faq-arrow">▼</div></div><div class="faq-ans"><div class="faq-ans-inner">We use a ResNet50-based CNN for feature extraction and disease classification, and an LSTM network for temporal gait analysis in videos. The pipeline runs on TensorFlow 2.x and processes frames through OpenCV before feeding into the neural networks.</div></div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><div class="faq-q-text">How long does an analysis take?</div><div class="faq-arrow">▼</div></div><div class="faq-ans"><div class="faq-ans-inner">Image analysis typically completes in 3–5 seconds. Video analysis takes 8–15 seconds depending on video length and resolution. We guarantee results within 60 seconds.</div></div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><div class="faq-q-text">Is there a mobile app?</div><div class="faq-arrow">▼</div></div><div class="faq-ans"><div class="faq-ans-inner">A dedicated iOS and Android app is currently in development and expected in Q3 2026. Until then, our web platform is fully responsive and works smoothly on mobile browsers — you can upload directly from your phone camera.</div></div></div>
+  </div>
+
+  <div class="faq-group" id="group-analysis">
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><div class="faq-q-text">What does the lameness score (0–5) mean?</div><div class="faq-arrow">▼</div></div><div class="faq-ans"><div class="faq-ans-inner">0 = No lameness. 1 = Mild (slight irregularity). 2 = Moderate (visible limp, arched back). 3 = Significant (pronounced limp). 4 = Severe (major gait disturbance). 5 = Critical (non-weight-bearing, requires immediate veterinary care).</div></div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><div class="faq-q-text">What gait features does CattleAI measure?</div><div class="faq-arrow">▼</div></div><div class="faq-ans"><div class="faq-ans-inner">We measure: stride length (metres), step frequency (steps/minute), walking speed (m/s), gait symmetry ratio, weight distribution across all 4 limbs, joint movement angles, and temporal consistency (video only). All values are compared against breed-specific reference ranges.</div></div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><div class="faq-q-text">Can I track an individual animal over time?</div><div class="faq-arrow">▼</div></div><div class="faq-ans"><div class="faq-ans-inner">Yes. Our History page stores all past analyses linked to your account. Future updates will include individual animal tagging (ear tag / RFID integration) so you can view full longitudinal health records per animal.</div></div></div>
+  </div>
+
+  <div class="faq-group" id="group-billing">
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><div class="faq-q-text">Is there a free trial?</div><div class="faq-arrow">▼</div></div><div class="faq-ans"><div class="faq-ans-inner">Yes. Every new account receives 10 free analyses — no credit card required. This allows you to test the platform with your own cattle before choosing a paid plan.</div></div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><div class="faq-q-text">Can I cancel my subscription anytime?</div><div class="faq-arrow">▼</div></div><div class="faq-ans"><div class="faq-ans-inner">Yes, all plans are month-to-month with no long-term contracts. Cancel anytime from your account settings — your access continues until the end of the billing period.</div></div></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q"><div class="faq-q-text">What payment methods do you accept?</div><div class="faq-arrow">▼</div></div><div class="faq-ans"><div class="faq-ans-inner">We accept UPI, credit/debit cards (Visa, Mastercard, RuPay), net banking, and bank transfers for enterprise plans. All payments are processed securely through Razorpay. GST invoices are issued automatically for Indian businesses.</div></div></div>
+  </div>
+
+  <div class="cta-box">
+    <span class="cta-icon">💬</span>
+    <div class="cta-ttl">Still have questions?</div>
+    <p class="cta-desc">Our support team is available Monday–Saturday, 9 AM to 6 PM IST</p>
+    <a href="contact.html" class="btn-cta">Contact Us →</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="foot-grid">
+    <div><div class="foot-brand">🐄 CattleAI</div><p class="foot-desc">AI-powered cattle health monitoring that helps farmers detect lameness and diseases early.</p></div>
+    <div><div class="foot-ttl">Quick Links</div><ul class="foot-links"><li><a href="../index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><div class="foot-ttl">Services</div><ul class="foot-links"><li><a href="prediction.html">Gait Analysis</a></li><li><a href="services.html">Disease Detection</a></li><li><a href="services.html">Lameness Scoring</a></li></ul></div>
+    <div><div class="foot-ttl">Contact</div><ul class="foot-links"><li><a href="mailto:info@cattleai.com">📧 info@cattleai.com</a></li><li><a href="tel:+919876543210">📞 +91 98765 43210</a></li><li><a href="contact.html">📍 Tiruchirappalli, TN</a></li></ul></div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 CattleAI Health Monitor. All rights reserved.</span><div class="foot-soc"><a href="https://wa.me/" target="_blank">💬</a><a href="https://twitter.com/" target="_blank">🐦</a><a href="https://facebook.com/" target="_blank">👍</a></div></div>
+</footer>
+
+<script>
+var SK='cattleai_user';
+function getS(){var s=null;try{s=JSON.parse(localStorage.getItem(SK));}catch(e){}try{if(!s)s=JSON.parse(sessionStorage.getItem(SK));}catch(e){}return s;}
+function doLogout(){if(confirm('Sign out?')){localStorage.removeItem(SK);sessionStorage.removeItem(SK);window.location.href='../login.html';}}
+window.addEventListener('DOMContentLoaded',function(){var s=getS();if(!s)return;var fn=s.firstName||(s.name?s.name.split(' ')[0]:null)||s.username||'User';var ln=s.lastName||(s.name?s.name.split(' ')[1]:'')||'';var ini=((fn[0]||'')+(ln[0]||'')).toUpperCase()||fn.substring(0,2).toUpperCase();document.getElementById('uAv').textContent=ini;document.getElementById('uNm').textContent=fn;});
+function toggleFaq(item){var isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(function(el){el.classList.remove('open');el.querySelector('.faq-ans').classList.remove('open');});if(!isOpen){item.classList.add('open');item.querySelector('.faq-ans').classList.add('open');}}
+function showGroup(id,btn){document.querySelectorAll('.faq-group').forEach(function(g){g.classList.remove('visible');});document.querySelectorAll('.faq-tab').forEach(function(t){t.classList.remove('active');});document.getElementById('group-'+id).classList.add('visible');btn.classList.add('active');}
+</script>
+</body>
+</html>

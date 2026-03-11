@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Contact Us — CattleAI</title>
+<script>(function(){var k='cattleai_user',s=null;try{s=JSON.parse(localStorage.getItem(k));}catch(e){}try{if(!s)s=JSON.parse(sessionStorage.getItem(k));}catch(e){}if(!s){window.location.replace('../login.html');}})();</script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--gd:#1a3a2a;--gm:#2d6a4f;--gl:#52b788;--am:#e9a825;--cr:#f8f4ec;--wh:#fff;--tx:#1a1a1a;--mu:#64748b;--br:#dde3d5;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'Mulish',sans-serif;background:var(--cr);color:var(--tx);overflow-x:hidden;padding-top:68px;}
+.navbar{position:fixed;top:0;left:0;right:0;z-index:9999;height:68px;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--br);display:flex;align-items:center;padding:0 40px;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
+.logo-icon{width:42px;height:42px;background:linear-gradient(135deg,var(--gm),var(--gd));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;}
+.logo-text{display:flex;flex-direction:column;line-height:1.15;}
+.logo-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--gd);}
+.logo-sub{font-size:10px;font-weight:700;color:var(--mu);letter-spacing:1px;text-transform:uppercase;}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none;position:absolute;left:50%;transform:translateX(-50%);}
+.nav-links a{text-decoration:none;font-size:14px;font-weight:600;color:var(--mu);padding:8px 16px;border-radius:8px;transition:color .2s,background .2s;}
+.nav-links a:hover{color:var(--gm);background:rgba(45,106,79,.08);}
+.nav-links a.active{color:var(--gd);font-weight:700;background:rgba(45,106,79,.08);}
+.nav-right{display:flex;align-items:center;gap:8px;margin-left:auto;}
+.soc-btn{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:18px;background:var(--cr);transition:transform .2s,background .2s;}
+.soc-btn:hover{transform:scale(1.15);background:var(--br);}
+.user-pill{display:flex;align-items:center;gap:8px;padding:5px 14px 5px 6px;background:var(--cr);border:1px solid var(--br);border-radius:24px;cursor:pointer;transition:background .2s;}
+.user-pill:hover{background:var(--br);}
+.user-av{width:30px;height:30px;background:linear-gradient(135deg,var(--gm),var(--gd));border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:800;}
+.user-nm{font-size:13px;font-weight:700;color:var(--tx);}
+.page-hero{background:linear-gradient(135deg,var(--gm) 0%,var(--gd) 100%);padding:80px 80px 70px;color:#fff;position:relative;overflow:hidden;}
+.page-hero::after{content:'📬';position:absolute;font-size:200px;right:80px;top:50%;transform:translateY(-50%);opacity:.08;}
+.breadcrumb{font-size:13px;color:rgba(255,255,255,.55);margin-bottom:16px;}
+.breadcrumb a{color:rgba(255,255,255,.55);text-decoration:none;}.breadcrumb a:hover{color:#fff;}
+.page-hero-title{font-family:'Playfair Display',serif;font-size:52px;font-weight:800;line-height:1.1;margin-bottom:16px;}
+.page-hero-sub{font-size:17px;opacity:.8;max-width:540px;line-height:1.7;}
+.sec-tag{display:inline-block;padding:5px 14px;background:rgba(45,106,79,.08);border-radius:20px;font-size:12px;font-weight:700;color:var(--gm);letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;}
+.sec-title{font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:var(--gd);margin-bottom:16px;line-height:1.2;}
+.contact-main{padding:80px;display:grid;grid-template-columns:1fr 1.4fr;gap:60px;background:#fff;}
+.contact-intro{font-size:15px;line-height:1.8;color:var(--mu);margin-bottom:36px;}
+.info-blocks{display:flex;flex-direction:column;gap:16px;}
+.info-block{display:flex;align-items:flex-start;gap:16px;padding:18px 22px;background:var(--cr);border-radius:14px;border:1px solid var(--br);transition:border-color .2s;}
+.info-block:hover{border-color:var(--gm);}
+.info-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--gm),var(--gd));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.info-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--gm);margin-bottom:4px;}
+.info-val{font-size:15px;font-weight:600;color:var(--tx);}
+.info-sub{font-size:12px;color:var(--mu);margin-top:2px;}
+.social-row{display:flex;gap:12px;margin-top:28px;}
+.soc-big{width:46px;height:46px;border:2px solid var(--br);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;text-decoration:none;transition:all .2s;}
+.soc-big:hover{border-color:var(--gm);background:rgba(45,106,79,.08);transform:translateY(-2px);}
+.form-wrap{background:var(--cr);border-radius:20px;padding:36px;border:1px solid var(--br);}
+.form-title{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--gd);margin-bottom:6px;}
+.form-sub{font-size:14px;color:var(--mu);margin-bottom:26px;}
+.form-row2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.form-group{margin-bottom:16px;}
+.form-label{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--tx);margin-bottom:6px;}
+.form-input,.form-select,.form-textarea{width:100%;padding:11px 14px;border:2px solid var(--br);border-radius:10px;font-size:14px;font-family:'Mulish',sans-serif;background:#fff;color:var(--tx);transition:border-color .2s,box-shadow .2s;outline:none;}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--gm);box-shadow:0 0 0 4px rgba(45,106,79,.1);}
+.form-textarea{resize:vertical;min-height:110px;}
+.btn-submit{width:100%;padding:13px;background:linear-gradient(135deg,var(--gm),var(--gd));color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:700;font-family:'Mulish',sans-serif;cursor:pointer;transition:transform .2s,box-shadow .2s;display:flex;align-items:center;justify-content:center;gap:8px;}
+.btn-submit:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(45,106,79,.3);}
+.btn-submit:disabled{opacity:.6;cursor:not-allowed;transform:none;}
+.success-msg{display:none;background:#e9f7ef;border:2px solid #6ee7b7;border-radius:12px;padding:24px;text-align:center;margin-top:20px;}
+.success-msg.show{display:block;}
+.map-sec{background:var(--cr);padding:0 80px 80px;}
+.map-box{background:linear-gradient(135deg,var(--gd),var(--gm));border-radius:20px;height:260px;display:flex;align-items:center;justify-content:center;color:#fff;flex-direction:column;gap:12px;}
+.map-icon{font-size:48px;}
+.map-lbl{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;}
+.map-addr{font-size:14px;opacity:.7;}
+.spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;vertical-align:middle;margin-right:6px;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.footer{background:var(--gd);color:rgba(255,255,255,.7);padding:50px 80px 28px;}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1);}
+.foot-brand{font-family:'Playfair Display',serif;font-size:22px;color:#fff;font-weight:700;margin-bottom:10px;}
+.foot-desc{font-size:13px;line-height:1.7;color:rgba(255,255,255,.5);max-width:260px;}
+.foot-ttl{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--am);margin-bottom:14px;}
+.foot-links{list-style:none;}.foot-links li{margin-bottom:8px;}
+.foot-links a{color:rgba(255,255,255,.6);text-decoration:none;font-size:13px;transition:color .2s;}.foot-links a:hover{color:#fff;}
+.foot-bottom{padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,.4);flex-wrap:wrap;gap:8px;}
+.foot-soc{display:flex;gap:10px;}
+.foot-soc a{width:34px;height:34px;background:rgba(255,255,255,.08);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;text-decoration:none;transition:background .2s;}.foot-soc a:hover{background:rgba(255,255,255,.18);}
+@media(max-width:900px){.nav-links{display:none;}.contact-main{grid-template-columns:1fr;padding:60px 32px;}.map-sec{padding:0 32px 60px;}.page-hero{padding:60px 32px;}.form-row2{grid-template-columns:1fr;}.foot-grid{grid-template-columns:1fr 1fr;}.footer{padding:40px 32px 24px;}.navbar{padding:0 20px;}}
+@media(max-width:600px){.page-hero-title{font-size:34px;}.foot-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="../index.html" class="nav-logo">
+    <div class="logo-icon">🐄</div>
+    <div class="logo-text"><span class="logo-name">CattleAI</span><span class="logo-sub">Health Monitor</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html" class="active">Contact Us</a></li>
+  </ul>
+  <div class="nav-right">
+    <a class="soc-btn" href="https://wa.me/" target="_blank">💬</a>
+    <a class="soc-btn" href="https://twitter.com/" target="_blank">🐦</a>
+    <a class="soc-btn" href="https://facebook.com/" target="_blank">👍</a>
+    <div class="user-pill" onclick="doLogout()">
+      <div class="user-av" id="uAv">👤</div><div class="user-nm" id="uNm">User</div>
+      <span style="font-size:11px;color:var(--mu);margin-left:2px;">▾</span>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="breadcrumb"><a href="../index.html">Home</a> › Contact Us</div>
+  <h1 class="page-hero-title">Contact Us</h1>
+  <p class="page-hero-sub">Have questions, need support, or want to explore enterprise options? Our team is ready to help.</p>
+</section>
+
+<div class="contact-main">
+  <!-- LEFT INFO -->
+  <div>
+    <div class="sec-tag">Get In Touch</div>
+    <h2 class="sec-title">We'd Love to Hear From You</h2>
+    <p class="contact-intro">Whether you're a first-time farmer trying to understand the platform, or an enterprise client looking for a custom solution — reach out and we'll respond within 24 hours.</p>
+    <div class="info-blocks">
+      <div class="info-block"><div class="info-icon">📧</div><div><div class="info-title">Email</div><div class="info-val">info@cattleai.com</div><div class="info-sub">Response within 24 hours</div></div></div>
+      <div class="info-block"><div class="info-icon">📞</div><div><div class="info-title">Phone</div><div class="info-val">+91 98765 43210</div><div class="info-sub">Mon–Sat, 9 AM – 6 PM IST</div></div></div>
+      <div class="info-block"><div class="info-icon">💬</div><div><div class="info-title">WhatsApp</div><div class="info-val">+91 98765 43210</div><div class="info-sub">Quick replies available</div></div></div>
+      <div class="info-block"><div class="info-icon">📍</div><div><div class="info-title">Office</div><div class="info-val">Tiruchirappalli, Tamil Nadu</div><div class="info-sub">India — 620001</div></div></div>
+    </div>
+    <div class="social-row">
+      <a class="soc-big" href="https://wa.me/" target="_blank">💬</a>
+      <a class="soc-big" href="https://twitter.com/" target="_blank">🐦</a>
+      <a class="soc-big" href="https://facebook.com/" target="_blank">👍</a>
+      <a class="soc-big" href="mailto:info@cattleai.com">📧</a>
+    </div>
+  </div>
+
+  <!-- RIGHT FORM -->
+  <div class="form-wrap">
+    <div class="form-title">Send a Message</div>
+    <div class="form-sub">Fill out the form and we'll get back to you shortly.</div>
+    <form id="contactForm" onsubmit="handleSubmit(event)">
+      <div class="form-row2">
+        <div class="form-group"><label class="form-label">First Name *</label><input type="text" class="form-input" id="fname" placeholder="First name" required></div>
+        <div class="form-group"><label class="form-label">Last Name *</label><input type="text" class="form-input" id="lname" placeholder="Last name" required></div>
+      </div>
+      <div class="form-row2">
+        <div class="form-group"><label class="form-label">Email *</label><input type="email" class="form-input" id="cemail" placeholder="your@email.com" required></div>
+        <div class="form-group"><label class="form-label">Phone</label><input type="tel" class="form-input" id="cphone" placeholder="+91 98765 43210"></div>
+      </div>
+      <div class="form-group"><label class="form-label">Topic *</label><select class="form-input form-select" id="topic" required><option value="">Select a topic</option><option>General Enquiry</option><option>Technical Support</option><option>Billing / Subscription</option><option>Enterprise / Custom Plan</option><option>Partnership / Integration</option><option>Feedback / Suggestion</option></select></div>
+      <div class="form-group"><label class="form-label">Farm Size</label><select class="form-input form-select" id="farmsize"><option value="">Select farm size</option><option>Small (1–20 cattle)</option><option>Medium (21–100 cattle)</option><option>Large (101–500 cattle)</option><option>Enterprise (500+ cattle)</option></select></div>
+      <div class="form-group"><label class="form-label">Your Message *</label><textarea class="form-textarea" id="message" placeholder="Tell us how we can help..." required></textarea></div>
+      <button type="submit" class="btn-submit" id="submitBtn">✉️ Send Message</button>
+    </form>
+    <div class="success-msg" id="successMsg">
+      <div style="font-size:48px;margin-bottom:12px;">✅</div>
+      <div style="font-weight:800;color:#065f46;font-size:18px;margin-bottom:6px;">Message Sent!</div>
+      <div style="font-size:14px;color:#047857;">Thank you for reaching out. We'll respond within 24 hours.</div>
+    </div>
+  </div>
+</div>
+
+<div class="map-sec">
+  <div class="map-box">
+    <span class="map-icon">📍</span>
+    <div class="map-lbl">CattleAI Headquarters</div>
+    <div class="map-addr">Tiruchirappalli, Tamil Nadu, India — 620001</div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="foot-grid">
+    <div><div class="foot-brand">🐄 CattleAI</div><p class="foot-desc">AI-powered cattle health monitoring that helps farmers detect lameness and diseases early.</p></div>
+    <div><div class="foot-ttl">Quick Links</div><ul class="foot-links"><li><a href="../index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><div class="foot-ttl">Services</div><ul class="foot-links"><li><a href="prediction.html">Gait Analysis</a></li><li><a href="services.html">Disease Detection</a></li><li><a href="services.html">Lameness Scoring</a></li></ul></div>
+    <div><div class="foot-ttl">Contact</div><ul class="foot-links"><li><a href="mailto:info@cattleai.com">📧 info@cattleai.com</a></li><li><a href="tel:+919876543210">📞 +91 98765 43210</a></li><li><a href="contact.html">📍 Tiruchirappalli, TN</a></li></ul></div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 CattleAI Health Monitor. All rights reserved.</span><div class="foot-soc"><a href="https://wa.me/" target="_blank">💬</a><a href="https://twitter.com/" target="_blank">🐦</a><a href="https://facebook.com/" target="_blank">👍</a></div></div>
+</footer>
+
+<script>
+var SK='cattleai_user';
+function getS(){var s=null;try{s=JSON.parse(localStorage.getItem(SK));}catch(e){}try{if(!s)s=JSON.parse(sessionStorage.getItem(SK));}catch(e){}return s;}
+function doLogout(){if(confirm('Sign out?')){localStorage.removeItem(SK);sessionStorage.removeItem(SK);window.location.href='../login.html';}}
+window.addEventListener('DOMContentLoaded',function(){var s=getS();if(!s)return;var fn=s.firstName||(s.name?s.name.split(' ')[0]:null)||s.username||'User';var ln=s.lastName||(s.name?s.name.split(' ')[1]:'')||'';var ini=((fn[0]||'')+(ln[0]||'')).toUpperCase()||fn.substring(0,2).toUpperCase();document.getElementById('uAv').textContent=ini;document.getElementById('uNm').textContent=fn;});
+function handleSubmit(e){e.preventDefault();var btn=document.getElementById('submitBtn');btn.disabled=true;btn.innerHTML='<span class="spinner"></span> Sending...';setTimeout(function(){document.getElementById('contactForm').style.display='none';document.getElementById('successMsg').classList.add('show');},1400);}
+</script>
+</body>
+</html>

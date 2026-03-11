@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>About Us — CattleAI</title>
+<script>(function(){var k='cattleai_user',s=null;try{s=JSON.parse(localStorage.getItem(k));}catch(e){}try{if(!s)s=JSON.parse(sessionStorage.getItem(k));}catch(e){}if(!s){window.location.replace('../login.html');}})();</script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--gd:#1a3a2a;--gm:#2d6a4f;--gl:#52b788;--am:#e9a825;--cr:#f8f4ec;--wh:#fff;--tx:#1a1a1a;--mu:#64748b;--br:#dde3d5;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'Mulish',sans-serif;background:var(--cr);color:var(--tx);overflow-x:hidden;padding-top:68px;}
+/* NAVBAR */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:9999;height:68px;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--br);display:flex;align-items:center;padding:0 40px;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
+.logo-icon{width:42px;height:42px;background:linear-gradient(135deg,var(--gm),var(--gd));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;}
+.logo-text{display:flex;flex-direction:column;line-height:1.15;}
+.logo-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--gd);}
+.logo-sub{font-size:10px;font-weight:700;color:var(--mu);letter-spacing:1px;text-transform:uppercase;}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none;position:absolute;left:50%;transform:translateX(-50%);}
+.nav-links a{text-decoration:none;font-size:14px;font-weight:600;color:var(--mu);padding:8px 16px;border-radius:8px;transition:color .2s,background .2s;}
+.nav-links a:hover{color:var(--gm);background:rgba(45,106,79,.08);}
+.nav-links a.active{color:var(--gd);font-weight:700;background:rgba(45,106,79,.08);}
+.nav-right{display:flex;align-items:center;gap:8px;margin-left:auto;}
+.soc-btn{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:18px;background:var(--cr);transition:transform .2s,background .2s;}
+.soc-btn:hover{transform:scale(1.15);background:var(--br);}
+.user-pill{display:flex;align-items:center;gap:8px;padding:5px 14px 5px 6px;background:var(--cr);border:1px solid var(--br);border-radius:24px;cursor:pointer;transition:background .2s;}
+.user-pill:hover{background:var(--br);}
+.user-av{width:30px;height:30px;background:linear-gradient(135deg,var(--gm),var(--gd));border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:800;}
+.user-nm{font-size:13px;font-weight:700;color:var(--tx);}
+/* PAGE HERO */
+.page-hero{background:linear-gradient(135deg,var(--gd) 0%,var(--gm) 100%);padding:80px 80px 70px;color:#fff;position:relative;overflow:hidden;}
+.page-hero::after{content:'🐄';position:absolute;font-size:220px;right:80px;top:50%;transform:translateY(-50%);opacity:.07;}
+.breadcrumb{font-size:13px;color:rgba(255,255,255,.55);margin-bottom:16px;font-weight:500;}
+.breadcrumb a{color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s;}
+.breadcrumb a:hover{color:#fff;}
+.page-hero-title{font-family:'Playfair Display',serif;font-size:52px;font-weight:800;line-height:1.1;margin-bottom:16px;}
+.page-hero-sub{font-size:17px;opacity:.8;max-width:540px;line-height:1.7;}
+/* SECTIONS */
+.sec-tag{display:inline-block;padding:5px 14px;background:rgba(45,106,79,.08);border-radius:20px;font-size:12px;font-weight:700;color:var(--gm);letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;}
+.sec-title{font-family:'Playfair Display',serif;font-size:38px;font-weight:700;color:var(--gd);margin-bottom:20px;line-height:1.2;}
+.sec-body{font-size:15px;line-height:1.8;color:#4a5568;margin-bottom:16px;}
+/* MISSION */
+.mission-sec{padding:80px;background:#fff;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.mission-visual{background:linear-gradient(135deg,var(--gd),var(--gm),var(--gl));border-radius:20px;height:380px;display:flex;align-items:center;justify-content:center;font-size:120px;box-shadow:0 20px 60px rgba(45,106,79,.2);}
+/* STATS */
+.stats-bar{background:linear-gradient(135deg,var(--gd),var(--gm));padding:50px 80px;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center;color:#fff;}
+.sbar-num{font-family:'Playfair Display',serif;font-size:42px;font-weight:700;color:var(--am);margin-bottom:8px;}
+.sbar-lbl{font-size:14px;opacity:.8;font-weight:500;}
+/* VALUES */
+.values-sec{padding:80px;background:var(--cr);}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+.val-card{background:#fff;border-radius:16px;padding:32px;border:1px solid var(--br);transition:transform .25s,box-shadow .25s;}
+.val-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(45,106,79,.1);}
+.val-icon{font-size:36px;margin-bottom:16px;}
+.val-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--gd);margin-bottom:10px;}
+.val-desc{font-size:14px;line-height:1.7;color:var(--mu);}
+/* TEAM */
+.team-sec{padding:80px;background:#fff;}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;}
+.team-card{text-align:center;padding:32px 20px;border-radius:16px;background:var(--cr);border:1px solid var(--br);transition:transform .25s;}
+.team-card:hover{transform:translateY(-4px);}
+.team-av{width:80px;height:80px;background:linear-gradient(135deg,var(--gm),var(--gd));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:36px;margin:0 auto 16px;box-shadow:0 4px 16px rgba(45,106,79,.25);}
+.team-name{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--gd);margin-bottom:4px;}
+.team-role{font-size:12px;font-weight:700;color:var(--gm);text-transform:uppercase;letter-spacing:.5px;}
+/* FOOTER */
+.footer{background:var(--gd);color:rgba(255,255,255,.7);padding:50px 80px 28px;}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1);}
+.foot-brand{font-family:'Playfair Display',serif;font-size:22px;color:#fff;font-weight:700;margin-bottom:10px;}
+.foot-desc{font-size:13px;line-height:1.7;color:rgba(255,255,255,.5);max-width:260px;}
+.foot-ttl{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--am);margin-bottom:14px;}
+.foot-links{list-style:none;}.foot-links li{margin-bottom:8px;}
+.foot-links a{color:rgba(255,255,255,.6);text-decoration:none;font-size:13px;transition:color .2s;}
+.foot-links a:hover{color:#fff;}
+.foot-bottom{padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,.4);flex-wrap:wrap;gap:8px;}
+.foot-soc{display:flex;gap:10px;}
+.foot-soc a{width:34px;height:34px;background:rgba(255,255,255,.08);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;text-decoration:none;transition:background .2s;}
+.foot-soc a:hover{background:rgba(255,255,255,.18);}
+/* RESPONSIVE */
+@media(max-width:900px){.nav-links{display:none;}.two-col,.values-grid,.team-grid{grid-template-columns:1fr 1fr;}.mission-sec,.values-sec,.team-sec{padding:60px 32px;}.stats-bar{grid-template-columns:1fr 1fr;padding:40px 32px;}.page-hero{padding:60px 32px;}.foot-grid{grid-template-columns:1fr 1fr;}.footer{padding:40px 32px 24px;}.navbar{padding:0 20px;}}
+@media(max-width:600px){.two-col,.values-grid,.team-grid,.stats-bar,.foot-grid{grid-template-columns:1fr;}.page-hero-title{font-size:34px;}}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="../index.html" class="nav-logo">
+    <div class="logo-icon">🐄</div>
+    <div class="logo-text"><span class="logo-name">CattleAI</span><span class="logo-sub">Health Monitor</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+  <div class="nav-right">
+    <a class="soc-btn" href="https://wa.me/" target="_blank" title="WhatsApp">💬</a>
+    <a class="soc-btn" href="https://twitter.com/" target="_blank" title="Twitter">🐦</a>
+    <a class="soc-btn" href="https://facebook.com/" target="_blank" title="Facebook">👍</a>
+    <div class="user-pill" onclick="doLogout()">
+      <div class="user-av" id="uAv">👤</div>
+      <div class="user-nm" id="uNm">User</div>
+      <span style="font-size:11px;color:var(--mu);margin-left:2px;">▾</span>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="breadcrumb"><a href="../index.html">Home</a> › About Us</div>
+  <h1 class="page-hero-title">About CattleAI</h1>
+  <p class="page-hero-sub">We are a team of agricultural technologists and AI researchers dedicated to transforming cattle health monitoring through intelligent automation.</p>
+</section>
+
+<!-- MISSION -->
+<section class="mission-sec">
+  <div class="two-col">
+    <div>
+      <div class="sec-tag">Our Mission</div>
+      <h2 class="sec-title">Healthier Herds Through Smarter Technology</h2>
+      <p class="sec-body">CattleAI was founded with a singular mission: to give every farmer — regardless of the size of their operation — access to the same level of precision health monitoring once reserved for large industrial farms with expensive specialists.</p>
+      <p class="sec-body">Using state-of-the-art convolutional neural networks (CNN) and long short-term memory models (LSTM), our platform analyses cattle gait patterns from standard video or image uploads, detecting early signs of lameness and disease before they become costly, painful problems.</p>
+      <p class="sec-body">Our technology is built on thousands of validated cattle movement samples, continuously improving with every new analysis — meaning the more farmers use it, the smarter and more accurate it becomes.</p>
+    </div>
+    <div class="mission-visual">🐄</div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div><div class="sbar-num">500+</div><div class="sbar-lbl">Farms Monitored</div></div>
+  <div><div class="sbar-num">95%</div><div class="sbar-lbl">Detection Accuracy</div></div>
+  <div><div class="sbar-num">7</div><div class="sbar-lbl">Diseases Identified</div></div>
+  <div><div class="sbar-num">10k+</div><div class="sbar-lbl">Analyses Completed</div></div>
+</div>
+
+<!-- VALUES -->
+<section class="values-sec">
+  <div class="sec-tag">What We Stand For</div>
+  <h2 class="sec-title">Our Core Values</h2>
+  <div class="values-grid">
+    <div class="val-card"><div class="val-icon">🐾</div><div class="val-title">Animal Welfare First</div><p class="val-desc">Every feature we build is designed to reduce suffering and improve quality of life for cattle. Early detection means faster, less painful treatment.</p></div>
+    <div class="val-card"><div class="val-icon">🔬</div><div class="val-title">Scientific Accuracy</div><p class="val-desc">Our models are trained and validated against peer-reviewed veterinary standards. We never trade accuracy for speed.</p></div>
+    <div class="val-card"><div class="val-icon">🌱</div><div class="val-title">Sustainable Farming</div><p class="val-desc">Healthier cattle produce more milk, gain weight more efficiently, and live longer — directly contributing to farm sustainability and profitability.</p></div>
+    <div class="val-card"><div class="val-icon">🤝</div><div class="val-title">Farmer Partnership</div><p class="val-desc">We build with farmers, not just for them. Our product roadmap is driven directly by feedback from the farming community.</p></div>
+    <div class="val-card"><div class="val-icon">🔒</div><div class="val-title">Data Privacy</div><p class="val-desc">Your farm data belongs to you. We use strict encryption and never sell or share your information with third parties.</p></div>
+    <div class="val-card"><div class="val-icon">⚡</div><div class="val-title">Accessibility</div><p class="val-desc">Our platform requires no expensive equipment — just a smartphone camera and an internet connection. Powerful AI for every farm.</p></div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team-sec">
+  <div class="sec-tag">The People</div>
+  <h2 class="sec-title">Meet Our Team</h2>
+  <div class="team-grid">
+    <div class="team-card"><div class="team-av">👩‍💻</div><div class="team-name">Dr. Priya Nair</div><div class="team-role">AI Research Lead</div></div>
+    <div class="team-card"><div class="team-av">👨‍🔬</div><div class="team-name">Ravi Kumar</div><div class="team-role">Veterinary Advisor</div></div>
+    <div class="team-card"><div class="team-av">👨‍💻</div><div class="team-name">Arjun Menon</div><div class="team-role">Backend Engineer</div></div>
+    <div class="team-card"><div class="team-av">👩‍🎨</div><div class="team-name">Deepa Singh</div><div class="team-role">UX Designer</div></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="foot-grid">
+    <div><div class="foot-brand">🐄 CattleAI</div><p class="foot-desc">AI-powered cattle health monitoring that helps farmers detect lameness and diseases early.</p></div>
+    <div><div class="foot-ttl">Quick Links</div><ul class="foot-links"><li><a href="../index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><div class="foot-ttl">Services</div><ul class="foot-links"><li><a href="prediction.html">Gait Analysis</a></li><li><a href="services.html">Disease Detection</a></li><li><a href="services.html">Health Reports</a></li><li><a href="services.html">Lameness Scoring</a></li></ul></div>
+    <div><div class="foot-ttl">Contact</div><ul class="foot-links"><li><a href="mailto:info@cattleai.com">📧 info@cattleai.com</a></li><li><a href="tel:+919876543210">📞 +91 98765 43210</a></li><li><a href="contact.html">📍 Tiruchirappalli, TN</a></li></ul></div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 CattleAI Health Monitor. All rights reserved.</span>
+    <div class="foot-soc"><a href="https://wa.me/" target="_blank">💬</a><a href="https://twitter.com/" target="_blank">🐦</a><a href="https://facebook.com/" target="_blank">👍</a></div>
+  </div>
+</footer>
+
+<script>
+var SK='cattleai_user';
+function getS(){var s=null;try{s=JSON.parse(localStorage.getItem(SK));}catch(e){}try{if(!s)s=JSON.parse(sessionStorage.getItem(SK));}catch(e){}return s;}
+function doLogout(){if(confirm('Sign out?')){localStorage.removeItem(SK);sessionStorage.removeItem(SK);window.location.href='../login.html';}}
+window.addEventListener('DOMContentLoaded',function(){
+  var s=getS();if(!s)return;
+  var fn=s.firstName||(s.name?s.name.split(' ')[0]:null)||s.username||'User';
+  var ln=s.lastName||(s.name?s.name.split(' ')[1]:'')||'';
+  var ini=((fn[0]||'')+(ln[0]||'')).toUpperCase()||fn.substring(0,2).toUpperCase();
+  document.getElementById('uAv').textContent=ini;
+  document.getElementById('uNm').textContent=fn;
+});
+</script>
+</body>
+</html>
